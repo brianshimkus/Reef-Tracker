@@ -11,9 +11,9 @@ function App() {
 
 	return (
 		<div className='App'>
-			<header>
-				<p>{!data ? 'Loading...' : data}</p>
-			</header>
+			<div className='grid place-items-center h-screen'>
+				<p className='text-center'>{!data ? 'Loading...' : data}</p>
+			</div>
 		</div>
 	)
 }
