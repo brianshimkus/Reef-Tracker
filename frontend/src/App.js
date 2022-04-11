@@ -12,7 +12,7 @@ function App() {
 	return (
 		<div className='App'>
 			<div className='grid place-items-center h-screen'>
-				<p className='text-center'>{!data ? 'Loading...' : data}</p>
+				<p>{!data ? 'Loading...' : data}</p>
 			</div>
 		</div>
 	)
