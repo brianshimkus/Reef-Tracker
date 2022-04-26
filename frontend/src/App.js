@@ -1,20 +1,17 @@
-import { useEffect, useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import HomePage from './pages/Home'
 
 function App() {
-	const [data, setData] = useState(null)
-
-	useEffect(() => {
-		fetch('/api')
-			.then((res) => res.json())
-			.then((data) => setData(data.message))
-	}, [])
-
 	return (
-		<div className='App'>
-			<div className='grid place-items-center h-screen'>
-				<p>{!data ? 'Loading...' : data}</p>
-			</div>
-		</div>
+		<>
+			<Router>
+				<div className='bg-sky-900 text-amber-500'>
+					<Routes>
+						<Route path='/' element={<HomePage />} />
+					</Routes>
+				</div>
+			</Router>
+		</>
 	)
 }
 
